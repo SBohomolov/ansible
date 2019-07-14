@@ -1,0 +1,11 @@
+[frontend-servers]
+frontend[1:2].example.com
+
+[backend-servers]
+backend[1:6].example.com
+
+[db-servers]
+db[1:3].example.com
+
+[redis-servers]
+redis.example.com
