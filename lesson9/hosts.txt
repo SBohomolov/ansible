@@ -1,8 +1,8 @@
-[frontend-servers]
+[servers_frontend]
 frontend1.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 frontend2.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 
-[backend-servers]
+[servers_backend]
 backend1.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 backend2.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 backend3.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
@@ -10,10 +10,17 @@ backend4.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubun
 backend5.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 backend6.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 
-[db-servers]
+[servers_db]
 db1.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 db2.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 db3.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
 
-[redis-servers]
+[servers_redis]
 redis.example.com ansible_connection=ssh ansible_port=34343 ansible_user=ubuntu
+
+[servers_ALL:children]
+servers_frontend
+servers_backend
+servers_db
+servers_redis
+
