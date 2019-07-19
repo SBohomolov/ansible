@@ -1,9 +1,17 @@
-  hosts: all
-  become: yes
+---
+hosts: all
+become: yes
+
+- name: DB
+  hosts: servers_db
   
-  roles:
-    - common
-    - mysql
-    - nginx
-    - php-fpm
-    - redis
+- name: Redis
+  hosts: servers_redis
+  
+- name: Frontend
+  hosts: servers_frontend
+  
+- name: Backend
+  hosts: servers_backend
+  
+  
