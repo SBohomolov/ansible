@@ -1,3 +1,4 @@
-ansible_connection : ssh 
-ansible_port       : 34343 
-ansible_user       : ubuntu
+---
+# Accept connections on the specified port, default is 6379 (IANA #815344).
+# If port 0 is specified Redis will not listen on a TCP socket.
+port 5555
