@@ -1,3 +1,7 @@
 ansible_connection : ssh 
 ansible_port       : 34343 
 ansible_user       : ubuntu
+mysqlservice       : mysqld
+mysql_port         : 2324
+dbuser             : sonofmotherfriend
+upassword          : very_secret_password
