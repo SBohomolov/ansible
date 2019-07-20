@@ -4,18 +4,21 @@ become: yes
 
 - name: DB
   hosts: servers_db
-  tasks: 
-  
+  tasks:
+    - action: ping  
+        
 - name: Redis
   hosts: servers_redis
   tasks: 
-  
+    - action: ping
+   
 - name: Frontend
   hosts: servers_frontend
   tasks: 
-  
+    - action: ping
+   
 - name: Backend
   hosts: servers_backend
   tasks: 
-  
+    - action: ping
   
