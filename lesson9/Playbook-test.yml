@@ -4,14 +4,18 @@ become: yes
 
 - name: DB
   hosts: servers_db
+  tasks: 
   
 - name: Redis
   hosts: servers_redis
+  tasks: 
   
 - name: Frontend
   hosts: servers_frontend
+  tasks: 
   
 - name: Backend
   hosts: servers_backend
+  tasks: 
   
   
